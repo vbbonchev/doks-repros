@@ -1,0 +1,7 @@
+{{- $headless_bundle := .Site.GetPage "snippets" -}}
+{{- $file := .Get 0 -}}
+{{ with $headless_bundle.Resources.GetMatch $file }}
+{{ .Content }}
+{{ end }}
+
+
